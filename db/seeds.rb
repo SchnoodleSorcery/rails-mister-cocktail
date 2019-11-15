@@ -9,27 +9,10 @@ Dose.destroy_all
 Cocktail.destroy_all
 Ingredient.destroy_all
 
-
-
 Cocktail.create(name: "Henderson")
 Cocktail.create(name: "Vodka Martini")
 Cocktail.create(name: "Kir Royal")
 Cocktail.create(name: "Negroni")
-
-
-
-# w = Cocktail.create(name: "Whiskey Sour")
-
-# d = Dose.new(description: "Mix all ingredients together")
-# i = Ingredient.create(name: "Gin")
-
-# d.cocktail = w
-# d.ingredient = i
-# d.save!
-
-
-# Ingredient.create(name: "Tonic")
-# Ingredient.create(name: "Cucumber")
 
 require 'json'
 require 'open-uri'

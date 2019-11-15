@@ -1,6 +1,28 @@
-<h1>Cocktail List</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/drdm61dhy/image/upload/v1573414964/assorted-wine-bottles-1283219_zwbf5l.jpg)">
+  <div class="logo">
+        <img src="https://res.cloudinary.com/drdm61dhy/image/upload/v1573462138/Drunken_Flamingo_Logo_copy_rpp33d.png" />
+  </div>
+  <div class="container">
+    <h1>Welcome to the Drunken Flamingo</h1>
+  </div>
+  <div class="button">
+    <a class="btn btn-outline-light" href="#">Explore</a>
+  </div>
+</div>
+<div>
+<h2> Our Cocktail List</h2>
+</div>
 
-  <% @cocktails.each do |cocktail| %>
-  <h3><%= link_to cocktail.name, cocktail_path(cocktail) %><%= link_to "Remove", cocktail_path(cocktail), method: :delete%></h3>
+<div class="container">
+<% @cocktails.each do |cocktail| %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 250, width: 250, crop: :fill %>')">
+  <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+</div>
 <% end %>
-<%= link_to "Add a new cocktail", new_cocktail_path(@restaurant)%>
+</div>
+<div class="index">
+<h4><%= link_to "Add your own Cocktail", new_cocktail_path(@cocktail) %></h4>
+</div>
+
+
+    <!-- <img src="https://res.cloudinary.com/drdm61dhy/image/upload/v1573462138/Drunken_Flamingo_Logo_copy_rpp33d.png" /> -->
